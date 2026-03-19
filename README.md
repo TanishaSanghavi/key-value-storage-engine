@@ -1,4 +1,4 @@
-# 🚀 High-Performance LSM-Tree Key-Value Storage Engine (C++)
+# High-Performance LSM-Tree Key-Value Storage Engine (C++)
 
 A high-performance key-value storage engine built in C++, inspired by LSM-tree systems like LevelDB and RocksDB.
 
@@ -12,7 +12,7 @@ A high-performance key-value storage engine built in C++, inspired by LSM-tree s
 
 ---
 
-## ⚙️ Features
+## Features
 
 ### MemTable
 - In-memory storage using unordered_map
@@ -37,13 +37,13 @@ A high-performance key-value storage engine built in C++, inspired by LSM-tree s
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 Client → MemTable → SSTables → Bloom Filters → Compaction
 
 ---
 
-## 🔄 Data Flow
+## Data Flow
 
 Write (PUT):
 - Insert into MemTable
@@ -57,7 +57,7 @@ Read (GET):
 
 ---
 
-## 🧪 Example
+## Example
 
 PUT user1 Alice  
 GET user1 → Alice  
@@ -65,14 +65,14 @@ GET unknown → Not found
 
 ---
 
-## ⚡ Performance
+## Performance
 - Write-optimized (sequential disk writes)
 - Read-optimized (Bloom filters)
 - Reduced read amplification via compaction
 
 ---
 
-## 🛠️ Build & Run
+## Build & Run
 
 Windows:
 g++ -std=c++17 -Iinclude src/main.cpp src/memtable.cpp src/sstable.cpp src/bloom_filter.cpp -o kv_store.exe  
@@ -81,15 +81,3 @@ g++ -std=c++17 -Iinclude src/main.cpp src/memtable.cpp src/sstable.cpp src/bloom
 Linux / macOS:
 g++ -std=c++17 -Iinclude src/main.cpp src/memtable.cpp src/sstable.cpp src/bloom_filter.cpp -o kv_store  
 ./kv_store  
-
----
-
-## 🚀 Future Improvements
-- Write-Ahead Log (WAL)
-- On-disk indexing
-- Multi-threaded compaction
-
----
-
-## 💡 Inspiration
-LevelDB, RocksDB
